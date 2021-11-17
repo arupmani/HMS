@@ -7,7 +7,7 @@ Project Stucture:
 
     Project Name: HMSWeb : Technologies used : Angular 13, Asp.Net Core Web API, SQL Sever, JWT Bearer Token authentication is implmented.
   
-    By default login provided for the user name "Admin" and password "Admin "new user can be added via 1 time script.
+    By default login provided for the user name "Admin" and password "Admin" new user can be added through  1 time script sample 1 time script provided in /HMS/DBScripts/PostDeploymentScript.
   
     Admin can create room, view room list and booked status
   
