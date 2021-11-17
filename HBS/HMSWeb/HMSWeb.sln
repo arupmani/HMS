@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HMSWeb", "HMSWeb.csproj", "{59594EE6-0656-4EA8-83A4-10C300C827C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMSClient", "..\HMSClient\HMSClient.csproj", "{4892374F-D45E-4BC7-A0E4-BAF4B35871C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMSDAL", "..\HMSDAL\HMSDAL.csproj", "{A0296A00-A6C6-4041-8D13-0142E271D6EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59594EE6-0656-4EA8-83A4-10C300C827C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59594EE6-0656-4EA8-83A4-10C300C827C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59594EE6-0656-4EA8-83A4-10C300C827C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59594EE6-0656-4EA8-83A4-10C300C827C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4892374F-D45E-4BC7-A0E4-BAF4B35871C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4892374F-D45E-4BC7-A0E4-BAF4B35871C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4892374F-D45E-4BC7-A0E4-BAF4B35871C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4892374F-D45E-4BC7-A0E4-BAF4B35871C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0296A00-A6C6-4041-8D13-0142E271D6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0296A00-A6C6-4041-8D13-0142E271D6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0296A00-A6C6-4041-8D13-0142E271D6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0296A00-A6C6-4041-8D13-0142E271D6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BA20673-6E0D-47AA-ACF4-3E36235D5B6C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>RomNo</th>
+            <th>Type</th>
+            <th>Booking Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let room of rooms">
+            <td>{{room.roomNo}} </td>
+            <td>{{room.bookedRoomType}}</td>
+            <td>{{room.bookingStatus}}</td>
+        </tr>
+    </tbody>
+    <a [routerLink]="'/createroom'" >
+        Add Room
+       </a>
+</table>
