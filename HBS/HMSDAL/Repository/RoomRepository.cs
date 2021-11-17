@@ -44,15 +44,17 @@ namespace HMSDAL.Repository
             if (db != null)
             {
                 roomInfo = (from r in db.Room
-                            join t in db.RoomType
-                            on r.RoomTypeId equals t.Id
                             join b in db.Booking
                             on r.Id equals b.RoomId
+                            into RoomBookedStatus
+                            from isBooked in RoomBookedStatus.DefaultIfEmpty()
                             select new RoomInfo
                             {
                                 RoomNo = r.RoomNo,
                                 BookedRoomType = r.RoomType.Name,
-                                BookingStatus = ""
+                                BookingStatus = isBooked != null ? "Booked" : "Not Booked",
+                                Id = r.Id
+
 
                             }).ToList();
 
