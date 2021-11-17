@@ -23,7 +23,7 @@ Project Stucture:
     Google API Client Id and Client Secret is store in User Secret.
     
     
-   Executable Procedure:
+   #How to Run :
     
     1 Table script and post deployment scripts are provided in the repository path /HMS/DBScripts/  table script need to be executed  followed by PostDeploymentScript.
     
