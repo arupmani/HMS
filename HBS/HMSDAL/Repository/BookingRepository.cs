@@ -15,17 +15,16 @@ namespace HMSDAL.Repository
             db = _db;
         }
 
-        public int BookRoom(Booking booking)
+        public string BookRoom(Booking booking)
         {
             if (db != null)
             {
                 db.Booking.Add(booking);
                 db.SaveChanges();
-
-                return booking.Id;
+                return db.Room.Where(r => r.Id == booking.RoomId).Select(a => a.RoomNo).FirstOrDefault(); ;
             }
 
-            return 0;
+            return "";
         }
 
         public List<Booking> GetMyBookings(string userName)

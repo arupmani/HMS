@@ -19,12 +19,10 @@ export class AuthenticationService {
         this.currentUser = this.currentUserSubject.asObservable();
       }
       public get currentUserValue(): UserModel {
-        debugger
         return this.currentUserSubject.value;
       }
     
       login(user:UserModel): Observable<any> {
-          debugger;
         const headers = { 'content-type': 'application/json'}  
         const body=JSON.stringify(user);
         console.log(body)

@@ -59,10 +59,10 @@ namespace HMSClient.Controllers
 
                 if (roomIdToBook > 0)
                 {
-                    var ret = bookingRepository.BookRoom(new Booking { BookingFrom = model.BookingFrom, BookingTo = model.BookingTo, RoomId = roomIdToBook, BookedBy = User.Identity.Name });
-                    if (ret > 0)
+                    var bookedRoomNo = bookingRepository.BookRoom(new Booking { BookingFrom = model.BookingFrom, BookingTo = model.BookingTo, RoomId = roomIdToBook, BookedBy = User.Identity.Name });
+                    if (!string.IsNullOrEmpty(bookedRoomNo))
                     {
-                        TempData["RoomBookedSuccessMessage"] = "<p>Room is booked! Room Id Is : </p>" + roomIdToBook;
+                        TempData["RoomBookedSuccessMessage"] = "<p>Room is booked! Room Id Is : </p>" + bookedRoomNo;
                         return RedirectToAction("MyBooking");
                     }
                     else
@@ -72,7 +72,7 @@ namespace HMSClient.Controllers
                     }
 
                 }
-                TempData["RoomBookedFailureMessage"] = strContactAdministratorMsg;
+                TempData["RoomBookedFailureMessage"] = "No rooms available";
                 return RedirectToAction("Index");
             }
             TempData["RoomBookedFailureMessage"] = "Please enter mandatory fields" ;

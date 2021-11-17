@@ -1,23 +1,24 @@
-<h1 >Add Room</h1>
+<br/>
+<h1 style="text-align: center;" >Add Room</h1>
 <div class="form-group">
  
 <br/>
 <br/>
 <form #myform="ngForm" (ngSubmit)="addRoom(myform)" >
-    <div class="row">
+    <div style="text-align: center;" >
         <label>Room No:</label>
         <input type="text"  
            ngModel required name="roomNo">
     </div>
     <br/>
-    <div>
+    <div style="text-align: center;" >
         <label>Room Type:</label>
         <select class="form-control" id="roomType"  ngModel name="roomTypeId" required>
             <option *ngFor="let rtype of roomTypes" [value]="rtype.id">{{rtype.name}}</option>
         </select>
     </div>
     <br/>
-    <div>
+    <div style="text-align: center;" >
         <button type="submit" class="btn-green">Submit</button>
     </div>
 </form>

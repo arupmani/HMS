@@ -8,7 +8,7 @@ namespace HMSDAL.Repository
 {
     public interface IBookingRepository
     {
-        int BookRoom(Booking booking);
+        string BookRoom(Booking booking);
         List<Booking> GetMyBookings(string userName);
     }
 }

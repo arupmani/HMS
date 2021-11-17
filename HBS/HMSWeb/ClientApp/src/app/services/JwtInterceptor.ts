@@ -8,7 +8,6 @@ export class JWTInterceptor implements HttpInterceptor{
 
     }
     intercept(request:HttpRequest<any>,next:HttpHandler){
-        debugger;
        const currentUser = this.authenticationService.currentUserValue;
        const isLoggedIn = currentUser && currentUser.token;
        if (isLoggedIn) {
