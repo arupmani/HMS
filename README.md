@@ -14,7 +14,7 @@ Project Stucture:
   
   2. Customer User Case : 
   
-    Project Name : HMSClient Technologies used: Asp.Net Core MVC, Google Authentication along with the Asp.Net core Identity and SQL Server.
+    Project Name : HMSClient Technologies used: Asp.Net Core MVC, Google Authentication (Googgle + API enabled in Google cloud) along with the Asp.Net core Identity and SQL Server.
     
     Customer have google authentication and can be register to the site this is handled by Asp.Net Identity tables.
     
@@ -25,7 +25,7 @@ Project Stucture:
     
    Executable Procedure:
     
-    1 Table script and post deployment scripts are provided in the repository path executed the table script followed by PostDeploymentScript.
+    1 Table script and post deployment scripts are provided in the repository path /HMS/DBScripts/  table script need to be executed  followed by PostDeploymentScript.
     
     2. Change the connection string given in appsettings.json (variable name : "HMSConnection" ) in HMSClient and HMSWeb projects
           "HMSConnection": "<LOCAL-SQLSERVER-CONNECTION-STRING>"
