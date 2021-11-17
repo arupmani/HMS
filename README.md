@@ -27,6 +27,8 @@ Project Stucture:
     
     1 Table script and post deployment scripts are provided in the repository path /HMS/DBScripts/  table script need to be executed  followed by PostDeploymentScript.
     
+    2. Identity related tables in HMSClient project can be create thorough this command in Package Manager consolre PM> update-database
+    
     2. Change the connection string given in appsettings.json (variable name : "HMSConnection" ) in both HMSClient and HMSWeb projects
           "HMSConnection": "<LOCAL-SQLSERVER-CONNECTION-STRING>"
           
