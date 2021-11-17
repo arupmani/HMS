@@ -13,7 +13,7 @@ namespace HMSWeb.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-   // [Authorize]
+    [Authorize]
     public class RoomController : ControllerBase
     {
         IRoomRepository roomRepository;
@@ -24,7 +24,7 @@ namespace HMSWeb.Controllers
 
         [HttpGet]
         [Route("GetRoomTypes")]
-        public  IActionResult GetRoomTypes()
+        public IActionResult GetRoomTypes()
         {
             try
             {
@@ -59,21 +59,22 @@ namespace HMSWeb.Controllers
             catch (Exception ex)
             {
                 return BadRequest();
-            }   
+            }
 
         }
         [HttpPost]
         [Route("AddRoom")]
-        public  IActionResult AddRoom([FromBody] RoomModel model)
+        public IActionResult AddRoom([FromBody] RoomModel model)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var roomId =  roomRepository.AddRoom(
-                        new Room { 
-                                    RoomTypeId=model.RoomTypeId,
-                                    RoomNo= model.RoomNo
+                    var roomId = roomRepository.AddRoom(
+                        new Room
+                        {
+                            RoomTypeId = model.RoomTypeId,
+                            RoomNo = model.RoomNo
                         });
                     if (roomId > 0)
                     {
