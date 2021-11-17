@@ -23,12 +23,13 @@ Project Stucture:
     Google API Client Id and Client Secret is store in User Secret.
     
     
-   #How to Run :
+   # How to Run :
     
     1 Table script and post deployment scripts are provided in the repository path /HMS/DBScripts/  table script need to be executed  followed by PostDeploymentScript.
     
-    2. Change the connection string given in appsettings.json (variable name : "HMSConnection" ) in HMSClient and HMSWeb projects
+    2. Change the connection string given in appsettings.json (variable name : "HMSConnection" ) in both HMSClient and HMSWeb projects
           "HMSConnection": "<LOCAL-SQLSERVER-CONNECTION-STRING>"
+          
     3. Both project are executable in IISExpress hence the appropriate project need to be open in IDE and to be executed.
     
     
