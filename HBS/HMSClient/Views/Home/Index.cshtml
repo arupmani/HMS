@@ -1,0 +1,35 @@
+﻿@model HMSClient.DomainViewModel.BookingViewModel
+
+
+<div class="text-center">
+    <h1 class="display-4">Book Room</h1>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="PostBookRoom">
+        <div>
+            From Date
+            @Html.TextBoxFor(model => model.BookingFrom, new { type = "date" })
+
+        </div>
+        <br />
+        <div>
+            To Date
+            @Html.TextBoxFor(model => model.BookingTo, new { type = "date" })
+        </div>
+        <br />
+        <div>
+            Room Type
+
+            @Html.DropDownListFor(model => model.RoomTypeId, (IEnumerable<SelectListItem>)ViewData["RoomTypes"], "Select RoomType")
+        </div>
+
+        <br />
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+    @if (TempData["RoomBookedFailureMessage"] != null)
+    {
+        <p class="text-danger">@TempData["RoomBookedFailureMessage"]</p>
+    }
+</div>
+
